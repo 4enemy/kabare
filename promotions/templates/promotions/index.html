@@ -1,0 +1,9 @@
+{% if promotions_list %}
+  <ul>
+  {% for promo in promotions_list %}
+    <li><a href="/promotions/{{ promo.id }}/">{{ promo.header }} ( {{ promo.posting_date }} )</a></li>
+  {% endfor %}
+  </ul>
+{% else %}
+  <p>No promo are available.</p>
+{% endif %}
